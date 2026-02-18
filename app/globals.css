@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #ffffff;
+  --background: #000000;
+  --accent: #00ff88;
+  --accent-dim: #00cc6a;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow {
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.glow-text {
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.card {
+  @apply bg-zinc-900 border border-zinc-800 rounded-xl p-6;
+}
+
+.btn-primary {
+  @apply bg-[#00ff88] text-black font-semibold px-6 py-3 rounded-lg hover:bg-[#00cc6a] transition-colors;
+}
+
+.btn-secondary {
+  @apply border border-[#00ff88] text-[#00ff88] font-semibold px-6 py-3 rounded-lg hover:bg-[#00ff88] hover:text-black transition-colors;
+}
