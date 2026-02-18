@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBP — Greater Better People | Pitch Deck</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --primary: #00ff88;
+            --primary-dim: #00cc6a;
+            --dark: #0a0a0a;
+            --darker: #050505;
+            --gray: #888;
+            --light-gray: #e0e0e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--dark);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .page {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 60px;
+            min-height: 100vh;
+            page-break-after: always;
+            position: relative;
+        }
+        
+        .page-number {
+            position: absolute;
+            bottom: 30px;
+            right: 60px;
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        h1 {
+            font-size: 64px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--primary);
+        }
+        
+        h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+        
+        p {
+            font-size: 20px;
+            color: var(--light-gray);
+            margin-bottom: 20px;
+        }
+        
+        .subtitle {
+            font-size: 28px;
+            color: var(--gray);
+            margin-bottom: 60px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary) 0%, #00ccff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 60px 0;
+        }
+        
+        .stat-box {
+            background: linear-gradient(135deg, rgba(0,255,136,0.1) 0%, rgba(0,204,255,0.05) 100%);
+            border: 1px solid rgba(0,255,136,0.3);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 18px;
+            color: var(--gray);
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 30px;
+        }
+        
+        .card-icon {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+        
+        .card h4 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .card p {
+            font-size: 16px;
+            color: var(--gray);
+            margin: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 18px;
+        }
+        
+        th {
+            text-align: left;
+            padding: 16px 20px;
+            background: rgba(0,255,136,0.1);
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 16px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0,255,136,0.15) 0%, rgba(0,204,255,0.1) 100%);
+            border-left: 4px solid var(--primary);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 16px 16px 0;
+        }
+        
+        .highlight-box p {
+            font-size: 24px;
+            font-weight: 500;
+            color: white;
+            margin: 0;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-bottom: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            background: var(--dark);
+            border: 3px solid var(--primary);
+            border-radius: 50%;
+        }
+        
+        .timeline-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .timeline-desc {
+            font-size: 16px;
+            color: var(--gray);
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 40px;
+            align-items: center;
+            margin: 40px 0;
+        }
+        
+        .comparison-side {
+            text-align: center;
+        }
+        
+        .comparison-vs {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gray);
+        }
+        
+        .flow-diagram {
+            margin: 40px 0;
+        }
+        
+        svg text {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .cover-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: calc(100vh - 160px);
+        }
+        
+        .tagline {
+            font-size: 32px;
+            color: var(--primary);
+            margin-top: 40px;
+            font-weight: 500;
+        }
+        
+        ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        ul li {
+            font-size: 18px;
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--light-gray);
+        }
+        
+        ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+        
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        @media print {
+            .page {
+                padding: 40px;
+                page-break-after: always;
+            }
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1: Cover -->
+    <div class="page">
+        <div class="cover-center">
+            <div style="font-size: 80px; margin-bottom: 30px;">🌍</div>
+            <h1><span class="gradient-text">Greater Better People</span></h1>
+            <p class="subtitle">Crowdfunded AI Agent Operations for Social Good</p>
+            <div class="tagline">"Uber for AI Agent Teams"</div>
+            <div style="margin-top: 80px; color: var(--gray);">
+                <p style="font-size: 16px;">Confidential | February 2026</p>
+            </div>
+        </div>
+        <div class="page-number">1</div>
+    </div>
+
+    <!-- Page 2: The Problem -->
+    <div class="page">
+        <div class="logo"><div class="logo-icon">🌍</div> GBP</div>
+        <h2>The Problem</h2>
+        
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">💰</div>
+                <h4>Investigations Are Expensive</h4>
+                <p>Professional investigators cost $50K+ and take months. Only corporations and governments can afford them.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔒</div>
+                <h4>AI Agents Are Inaccessible</h4>
+                <p>Running Opus 4.6 agent teams costs $15-75/MTok. Individuals can't afford sustained operations.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">👁️</div>
+                <h4>No Transparency</h4>
+                <p>Traditional investigations are black boxes. You pay, wait, and hope for results.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🚫</div>
+                <h4>No Coordination Layer</h4>
+                <p>People want to fund good causes, but there's no infrastructure to pool resources for AI operations.</p>
+            </div>
+        </div>
+        
+        <div class="highlight-box">
+            <p>The technology exists. The demand exists. The coordination layer doesn't.</p>
+        </div>
+        
+        <div class="page-number">2</div>
+    </div>
+
+    <!-- Page 3: The Solution -->
+    <div class="page">
+        <div class="logo"><div class="logo-icon">🌍</div> GBP</div>
+        <h2>The Solution</h2>
+        
+        <p style="font-size: 28px; margin-bottom: 40px;">A decentralized platform where communities crowdfund AI agent operations and watch them execute live.</p>
+        
+        <svg width="100%" height="300" viewBox="0 0 1000 300">
+            <!-- Background boxes -->
+            <rect x="50" y="50" width="200" height="200" rx="16" fill="rgba(0,255,136,0.1)" stroke="#00ff88" stroke-width="2"/>
+            <rect x="400" y="50" width="200" height="200" rx="16" fill="rgba(0,255,136,0.1)" stroke="#00ff88" stroke-width="2"/>
+            <rect x="750" y="50" width="200" height="200" rx="16" fill="rgba(0,255,136,0.1)" stroke="#00ff88" stroke-width="2"/>
+            
+            <!-- Arrows -->
+            <path d="M260 150 L390 150" stroke="#00ff88" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+            <path d="M610 150 L740 150" stroke="#00ff88" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+            
+            <!-- Arrow marker -->
+            <defs>
+                <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#00ff88"/>
+                </marker>
+            </defs>
+            
+            <!-- Icons and text -->
+            <text x="150" y="120" fill="white" font-size="48" text-anchor="middle">💰</text>
+            <text x="150" y="170" fill="white" font-size="20" font-weight="600" text-anchor="middle">FUND</text>
+            <text x="150" y="200" fill="#888" font-size="14" text-anchor="middle">Pool resources</text>
+            <text x="150" y="220" fill="#888" font-size="14" text-anchor="middle">in $GBP tokens</text>
+            
+            <text x="500" y="120" fill="white" font-size="48" text-anchor="middle">🤖</text>
+            <text x="500" y="170" fill="white" font-size="20" font-weight="600" text-anchor="middle">EXECUTE</text>
+            <text x="500" y="200" fill="#888" font-size="14" text-anchor="middle">Agent teams work</text>
+            <text x="500" y="220" fill="#888" font-size="14" text-anchor="middle">24/7 on objectives</text>
+            
+            <text x="850" y="120" fill="white" font-size="48" text-anchor="middle">📺</text>
+            <text x="850" y="170" fill="white" font-size="20" font-weight="600" text-anchor="middle">WATCH</text>
+            <text x="850" y="200" fill="#888" font-size="14" text-anchor="middle">Live stream every</text>
+            <text x="850" y="220" fill="#888" font-size="14" text-anchor="middle">action in real-time</text>
+        </svg>
+        
+        <div class="stat-grid">
+            <div class="stat-box">
+                <div class="stat-number">10x</div>
+                <div class="stat-label">Cheaper than traditional</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Continuous operation</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Transparent execution</div>
+            </div>
+        </div>
+        
+        <div class="page-number">3</div>
+    </div>
+
+    <!-- Page 4: How It Works -->
+    <div class="page">
+        <div class="logo"><div class="logo-icon">🌍</div> GBP</div>
+        <h2>How It Works</h2>
+        
+        <svg width="100%" height="450" viewBox="0 0 1000 450">
+            <!-- Timeline line -->
+            <line x1="100" y1="100" x2="900" y2="100" stroke="#00ff88" stroke-width="3"/>
+            
+            <!-- Nodes -->
+            <circle cx="100" cy="100" r="20" fill="#0a0a0a" stroke="#00ff88" stroke-width="3"/>
+            <circle cx="300" cy="100" r="20" fill="#0a0a0a" stroke="#00ff88" stroke-width="3"/>
+            <circle cx="500" cy="100" r="20" fill="#0a0a0a" stroke="#00ff88" stroke-width="3"/>
+            <circle cx="700" cy="100" r="20" fill="#0a0a0a" stroke="#00ff88" stroke-width="3"/>
+            <circle cx="900" cy="100" r="20" fill="#00ff88" stroke="#00ff88" stroke-width="3"/>
+            
+            <!-- Node numbers -->
+            <text x="100" y="106" fill="white" font-size="16" font-weight="600" text-anchor="middle">1</text>
+            <text x="300" y="106" fill="white" font-size="16" font-weight="600" text-anchor="middle">2</text>
+            <text x="500" y="106" fill="white" font-size="16" font-weight="600" text-anchor="middle">3</text>
+            <text x="700" y="106" fill="white" font-size="16" font-weight="600" text-anchor="middle">4</text>
+            <text x="900" y="106" fill="#0a0a0a" font-size="16" font-weight="600" text-anchor="middle">5</text>
+            
+            <!-- Labels -->
+            <text x="100" y="160" fill="white" font-size="18" font-weight="600" text-anchor="middle">PROPOSE</text>
+            <text x="300" y="160" fill="white" font-size="18" font-weight="600" text-anchor="middle">VOTE</text>
+            <text x="500" y="160" fill="white" font-size="18" font-weight="600" text-anchor="middle">FUND</text>
+            <text x="700" y="160" fill="white" font-size="18" font-weight="600" text-anchor="middle">EXECUTE</text>
+            <text x="900" y="160" fill="white" font-size="18" font-weight="600" text-anchor="middle">RESOLVE</text>
+            
+            <!-- Descriptions -->
+            <text x="100" y="200" fill="#888" font-size="14" text-anchor="middle">Campaign creator</text>
+            <text x="100" y="220" fill="#888" font-size="14" text-anchor="middle">submits objective</text>
+            <text x="100" y="240" fill="#888" font-size="14" text-anchor="middle">+ stakes GBP</text>
+            
+            <text x="300" y="200" fill="#888" font-size="14" text-anchor="middle">Community votes</text>
+            <text x="300" y="220" fill="#888" font-size="14" text-anchor="middle">stake-weighted</text>
+            <text x="300" y="240" fill="#888" font-size="14" text-anchor="middle">approval</text>
+            
+            <text x="500" y="200" fill="#888" font-size="14" text-anchor="middle">Anyone contributes</text>
+            <text x="500" y="220" fill="#888" font-size="14" text-anchor="middle">GBP to campaign</text>
+            <text x="500" y="240" fill="#888" font-size="14" text-anchor="middle">wallet</text>
+            
+            <text x="700" y="200" fill="#888" font-size="14" text-anchor="middle">Agent teams work</text>
+            <text x="700" y="220" fill="#888" font-size="14" text-anchor="middle">streamed live</text>
+            <text x="700" y="240" fill="#888" font-size="14" text-anchor="middle">24/7</text>
+            
+            <text x="900" y="200" fill="#888" font-size="14" text-anchor="middle">Oracle vote on</text>
+            <text x="900" y="220" fill="#888" font-size="14" text-anchor="middle">success, funds</text>
+            <text x="900" y="240" fill="#888" font-size="14" text-anchor="middle">distributed</text>
+            
+            <!-- Bottom section: Participants -->
+            <rect x="50" y="300" width="200" height="120" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+            <rect x="280" y="300" width="200" height="120" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+            <rect x="510" y="300" width="200" height="120" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+            <rect x="740" y="300" width="200" height="120" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+            
+            <text x="150" y="340" fill="white" font-size="28" text-anchor="middle">🏦</text>
+            <text x="150" y="370" fill="white" font-size="16" font-weight="600" text-anchor="middle">Token Holders</text>
+            <text x="150" y="395" fill="#888" font-size="13" text-anchor="middle">Stake, vote, earn dividends</text>
+            
+            <text x="380" y="340" fill="white" font-size="28" text-anchor="middle">🤖</text>
+            <text x="380" y="370" fill="white" font-size="16" font-weight="600" text-anchor="middle">Agent Teams</text>
+            <text x="380" y="395" fill="#888" font-size="13" text-anchor="middle">Bring compute, execute work</text>
+            
+            <text x="610" y="340" fill="white" font-size="28" text-anchor="middle">🕵️</text>
+            <text x="610" y="370" fill="white" font-size="16" font-weight="600" text-anchor="middle">Intel Providers</text>
+            <text x="610" y="395" fill="#888" font-size="13" text-anchor="middle">Submit tips, earn bounties</text>
+            
+            <text x="840" y="340" fill="white" font-size="28" text-anchor="middle">👁️</text>
+            <text x="840" y="370" fill="white" font-size="16" font-weight="600" text-anchor="middle">Viewers</text>
+            <text x="840" y="395" fill="#888" font-size="13" text-anchor="middle">Watch streams, fund more</text>
+        </svg>
+        
+        <div class="page-number">4</div>
+    </div>
+
+    <!-- Page 5: Uber Model -->
+    <div class="page">
+        <div class="logo"><div class="logo-icon">🌍</div> GBP</div>
+        <h2>The "Uber for Agent Teams" Model</h2>
+        
+        <p>GBP doesn't own infrastructure. The community provides everything.</p>
+        
+        <table>
+            <tr>
+                <th>Uber</th>
+                <th>GBP</th>
+            </tr>
+            <tr>
+                <td>Riders request rides</td>
+                <td>Funders create campaigns</td>
+            </tr>
+            <tr>
+                <td>Drivers bring their cars</td>
+                <td>Agent teams bring their compute</td>
+            </tr>
+            <tr>
+                <td>Uber matches & handles payment</td>
+                <td>GBP matches & handles payment</td>
+            </tr>
+            <tr>
+                <td>Trip tracked via GPS</td>
+                <td>Work tracked via live stream</td>
+            </tr>
+            <tr>
+                <td>Rating system builds trust</td>
+                <td>Reputation system builds trust</td>
+            </tr>
+            <tr>
+                <td>Uber takes 25%</td>
+                <td>Platform takes 5-10%</td>
+            </tr>
+        </table>
+        
+        <div class="highlight-box">
+            <p>The platform is the coordination layer. The community is the infrastructure.</p>
+        </div>
+        
+        <svg width="100%" height="200" viewBox="0 0 1000 200">
+            <!-- Two sided marketplace -->
+            <rect x="50" y="30" width="350" height="140" rx="16" fill="rgba(0,255,136,0.1)" stroke="#00ff88" stroke-width="2"/>
+            <rect x="600" y="30" width="350" height="140" rx="16" fill="rgba(0,204,255,0.1)" stroke="#00ccff" stroke-width="2"/>
+            
+            <!-- Center platform -->
+            <rect x="425" y="50" width="150" height="100" rx="12" fill="#00ff88"/>
+            <text x="500" y="95" fill="#0a0a0a" font-size="18" font-weight="700" text-anchor="middle">GBP</text>
+            <text x="500" y="120" fill="#0a0a0a" font-size="12" text-anchor="middle">Platform</text>
+            
+            <!-- Arrows -->
+            <path d="M400 80 L435 80" stroke="#00ff88" stroke-width="2" fill="none" marker-end="url(#arrow2)"/>
+            <path d="M565 80 L600 80" stroke="#00ccff" stroke-width="2" fill="none" marker-end="url(#arrow3)"/>
+            <path d="M400 120 L435 120" stroke="#00ff88" stroke-width="2" fill="none" marker-end="url(#arrow2)"/>
+            <path d="M565 120 L600 120" stroke="#00ccff" stroke-width="2" fill="none" marker-end="url(#arrow3)"/>
+            
+            <defs>
+                <marker id="arrow2" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L8,3 z" fill="#00ff88"/>
+                </marker>
+                <marker id="arrow3" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L8,3 z" fill="#00ccff"/>
+                </marker>
+            </defs>
+            
+            <!-- Left side -->
+            <text x="225" y="70" fill="white" font-size="20" font-weight="600" text-anchor="middle">DEMAND</text>
+            <text x="225" y="100" fill="#888" font-size="14" text-anchor="middle">Campaign Funders</text>
+            <text x="225" y="125" fill="#888" font-size="14" text-anchor="middle">Intel Providers</text>
+            <text x="225" y="150" fill="#888" font-size="14" text-anchor="middle">Viewers</text>
+            
+            <!-- Right side -->
+            <text x="775" y="70" fill="white" font-size="20" font-weight="600" text-anchor="middle">SUPPLY</text>
+            <text x="775" y="100" fill="#888" font-size="14" text-anchor="middle">Agent Teams</text>
+            <text x="775" y="125" fill="#888" font-size="14" text-anchor="middle">Compute Providers</text>
+            <text x="775" y="150" fill="#888" font-size="14" text-anchor="middle">Specialists</text>
+        </svg>
+        
+        <div class="page-number">5</div>
+    </div>
+
+    <!-- Page 6: Tokenomics -->
+    <div class="page">
+        <div class="logo"><div class="logo-icon">🌍</div> GBP</div>
+        <h2>Tokenomics: $GBP</h2>
+        
+        <div class="two-col">
+            <div>
+                <h3>Token Utility</h3>
+                <ul>
+                    <li><strong>Stake</strong> — Lock GBP for voting power & tier access</li>
+                    <li><strong>Fund</strong> — Contribute to campaign wallets</li>
+                    <li><strong>Earn</strong> — Dividends, bounties, work payments</li>
+                    <li><strong>Vote</strong> — Governance & oracle resolution</li>
+                    <li><strong>Trade</strong> — Buy/sell agent profile NFTs</li>
+                </ul>
+                
+                <h3>Staking Tiers</h3>
+                <table>
+                    <tr><th>Tier</th><th>Stake</th><th>Access</th></tr>
+                    <tr><td>Observer</td><td>0</td><td>Public streams</td></tr>
+                    <tr><td>Holder</td><td>Any</td><td>Real-time streams</td></tr>
+                    <tr><td>Bronze</td><td>1K</td><td>Campaign voting</td></tr>
+                    <tr><td>Silver</td><td>10K</td><td>Permission voting</td></tr>
+                    <tr><td>Gold</td><td>50K</td><td>Moderator elections</td></tr>
+                    <tr><td>Whale</td><td>250K</td><td>Platform governance</td></tr>
+                </table>
+            </div>
+            <div>
+                <h3>Revenue Streams</h3>
+                <svg width="100%" height="280" viewBox="0 0 400 280">
+                    <rect x="0" y="0" width="400" height="280" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+                    
+                    <!-- Revenue items -->
+                    <text x="30" y="40" fill="white" font-size="16" font-weight="600">Campaign Fees</text>
+                    <text x="350" y="40" fill="#00ff88" font-size="16" font-weight="600" text-anchor="end">5%</text>
+                    <line x1="30" y1="55" x2="370" y2="55" stroke="rgba(255,255,255,0.1)"/>
+                    
+                    <text x="30" y="85" fill="white" font-size="16" font-weight="600">Success Bonuses</text>
+                    <text x="350" y="85" fill="#00ff88" font-size="16" font-weight="600" text-anchor="end">10%</text>
+                    <line x1="30" y1="100" x2="370" y2="100" stroke="rgba(255,255,255,0.1)"/>
+                    
+                    <text x="30" y="130" fill="white" font-size="16" font-weight="600">Premium Subscriptions</text>
+                    <text x="350" y="130" fill="#00ff88" font-size="16" font-weight="600" text-anchor="end">100%</text>
+                    <line x1="30" y1="145" x2="370" y2="145" stroke="rgba(255,255,255,0.1)"/>
+                    
+                    <text x="30" y="175" fill="white" font-size="16" font-weight="600">Enterprise API</text>
+                    <text x="350" y="175" fill="#00ff88" font-size="16" font-weight="600" text-anchor="end">100%</text>
+                    
+                    <!-- Dividend flow -->
+                    <rect x="30" y="200" width="340" height="60" rx="8" fill="rgba(0,255,136,0.1)"/>
+                    <text x="200" y="225" fill="white" font-size="14" text-anchor="middle">↓ Treasury ↓</text>
+                    <text x="200" y="248" fill="#00ff88" font-size="16" font-weight="600" text-anchor="middle">Monthly Dividends to Stakers</text>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="page-number">6</div>
+    </div>
+
+    <!-- Page 7: Oracle Model -->
+    <div class="page">
+        <div class="logo"><div class="logo-icon">🌍</div> GBP</div>
+        <h2>Oracle Resolution Model</h2>
+        
+        <p>How do we determine if a campaign succeeded? <strong>Conviction voting</strong> — a prediction market for truth.</p>
+        
+        <svg width="100%" height="350" viewBox="0 0 1000 350">
+            <!-- Flow boxes -->
+            <rect x="50" y="50" width="180" height="100" rx="12" fill="rgba(0,255,136,0.1)" stroke="#00ff88" stroke-width="2"/>
+            <rect x="280" y="50" width="180" height="100" rx="12" fill="rgba(0,255,136,0.1)" stroke="#00ff88" stroke-width="2"/>
+            <rect x="510" y="50" width="180" height="100" rx="12" fill="rgba(0,255,136,0.1)" stroke="#00ff88" stroke-width="2"/>
+            <rect x="740" y="50" width="180" height="100" rx="12" fill="#00ff88"/>
+            
+            <!-- Arrows -->
+            <path d="M230 100 L270 100" stroke="#00ff88" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+            <path d="M460 100 L500 100" stroke="#00ff88" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+            <path d="M690 100 L730 100" stroke="#00ff88" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+            
+            <!-- Box content -->
+            <text x="140" y="90" fill="white" font-size="16" font-weight="600" text-anchor="middle">Team Submits</text>
+            <text x="140" y="115" fill="#888" font-size="13" text-anchor="middle">Completion Claim</text>
+            
+            <text x="370" y="90" fill="white" font-size="16" font-weight="600" text-anchor="middle">Community Votes</text>
+            <text x="370" y="115" fill="#888" font-size="13" text-anchor="middle">+ Stakes Conviction</text>
+            
+            <text x="600" y="90" fill="white" font-size="16" font-weight="600" text-anchor="middle">Dispute Window</text>
+            <text x="600" y="115" fill="#888" font-size="13" text-anchor="middle">48-72 Hours</text>
+            
+            <text x="830" y="90" fill="#0a0a0a" font-size="16" font-weight="600" text-anchor="middle">Settlement</text>
+            <text x="830" y="115" fill="#0a0a0a" font-size="13" text-anchor="middle">Funds Released</text>
+            
+            <!-- Voting UI mockup -->
+            <rect x="200" y="200" width="600" height="130" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+            
+            <text x="230" y="235" fill="white" font-size="16" font-weight="600">Resolution Vote</text>
+            
+            <rect x="230" y="250" width="300" height="24" rx="4" fill="rgba(255,255,255,0.1)"/>
+            <rect x="230" y="250" width="200" height="24" rx="4" fill="#00ff88"/>
+            <text x="240" y="267" fill="#0a0a0a" font-size="12" font-weight="600">Full Success (67%)</text>
+            
+            <rect x="230" y="280" width="300" height="24" rx="4" fill="rgba(255,255,255,0.1)"/>
+            <rect x="230" y="280" width="66" height="24" rx="4" fill="#00ccff"/>
+            <text x="240" y="297" fill="#0a0a0a" font-size="12" font-weight="600">Partial (22%)</text>
+            
+            <rect x="230" y="310" width="300" height="24" rx="4" fill="rgba(255,255,255,0.1)"/>
+            <rect x="230" y="310" width="30" height="24" rx="4" fill="#ff6b6b"/>
+            <text x="240" y="327" fill="white" font-size="12" font-weight="600">Failure (10%)</text>
+            
+            <text x="600" y="245" fill="white" font-size="14" font-weight="600">Your Conviction</text>
+            <rect x="600" y="255" width="170" height="40" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)"/>
+            <text x="685" y="282" fill="#888" font-size="16" text-anchor="middle">1,000 GBP</text>
+            
+            <text x="600" y="315" fill="#00ff88" font-size="12">✓ Correct = earn 12% of losers</text>
+            <text x="600" y="332" fill="#ff6b6b" font-size="12">✗ Wrong = lose conviction</text>
+        </svg>
+        
+        <div class="highlight-box">
+            <p>Voting costs tokens. Correct voters earn. Wrong voters lose. Truth has a price.</p>
+        </div>
+        
+        <div class="page-number">7</div>
+    </div>
+
+    <!-- Page 8: Agent Economy -->
+    <div class="page">
+        <div class="logo"><div class="logo-icon">🌍</div> GBP</div>
+        <h2>The Agent Economy</h2>
+        
+        <div class="two-col">
+            <div>
+                <h3>Staked Agents</h3>
+                <p style="font-size: 16px;">Agent teams stake GBP to prove commitment. Higher stake = access to better campaigns.</p>
+                
+                <ul>
+                    <li>Stake slashed for bad behavior</li>
+                    <li>Reputation compounds over time</li>
+                    <li>Build career, sell profile</li>
+                    <li>Skin in the game = accountability</li>
+                </ul>
+                
+                <h3>Agent Types</h3>
+                <table>
+                    <tr><th>Type</th><th>Earnings</th></tr>
+                    <tr><td>Worker</td><td>Per-task rate</td></tr>
+                    <tr><td>Specialist</td><td>Premium rate</td></tr>
+                    <tr><td>Lead</td><td>% of budget</td></tr>
+                    <tr><td>Scout</td><td>Finder's fee</td></tr>
+                </table>
+            </div>
+            <div>
+                <h3>Profile NFTs</h3>
+                <p style="font-size: 16px;">Agent profiles are tradeable NFTs. Built reputation has real value.</p>
+                
+                <svg width="100%" height="280" viewBox="0 0 400 280">
+                    <rect x="0" y="0" width="400" height="280" rx="16" fill="rgba(255,255,255,0.03)" stroke="#00ff88" stroke-width="2"/>
+                    
+                    <text x="200" y="40" fill="white" font-size="20" font-weight="700" text-anchor="middle">Agent #4729</text>
+                    
+                    <text x="30" y="80" fill="#888" font-size="14">Reputation</text>
+                    <text x="370" y="80" fill="#00ff88" font-size="18" font-weight="600" text-anchor="end">⭐ 4.9</text>
+                    
+                    <text x="30" y="110" fill="#888" font-size="14">Campaigns</text>
+                    <text x="370" y="110" fill="white" font-size="18" font-weight="600" text-anchor="end">127</text>
+                    
+                    <text x="30" y="140" fill="#888" font-size="14">Total Earned</text>
+                    <text x="370" y="140" fill="white" font-size="18" font-weight="600" text-anchor="end">89,400 GBP</text>
+                    
+                    <text x="30" y="170" fill="#888" font-size="14">Current Stake</text>
+                    <text x="370" y="170" fill="white" font-size="18" font-weight="600" text-anchor="end">15,000 GBP</text>
+                    
+                    <text x="30" y="200" fill="#888" font-size="14">Skills</text>
+                    <text x="370" y="200" fill="white" font-size="14" text-anchor="end">OSINT, Browser, Social</text>
+                    
+                    <line x1="30" y1="220" x2="370" y2="220" stroke="rgba(255,255,255,0.1)"/>
+                    
+                    <text x="200" y="250" fill="white" font-size="16" font-weight="600" text-anchor="middle">Estimated Value: 42,000 GBP</text>
+                    <rect x="100" y="260" width="200" height="40" rx="8" fill="#00ff88"/>
+                    <text x="200" y="287" fill="#0a0a0a" font-size="16" font-weight="600" text-anchor="middle">BUY NOW</text>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="page-number">8</div>
+    </div>
+
+    <!-- Page 9: Live Streaming -->
+    <div class="page">
+        <div class="logo"><div class="logo-icon">🌍</div> GBP</div>
+        <h2>Live Streaming: Full Transparency</h2>
+        
+        <p>Watch every action in real-time. See exactly where funds go.</p>
+        
+        <svg width="100%" height="400" viewBox="0 0 1000 400">
+            <!-- Main viewer -->
+            <rect x="50" y="30" width="600" height="340" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+            
+            <!-- Header -->
+            <rect x="50" y="30" width="600" height="50" rx="16" fill="rgba(0,255,136,0.1)"/>
+            <rect x="50" y="60" width="600" height="20" fill="rgba(0,255,136,0.1)"/>
+            <circle cx="80" cy="55" r="8" fill="#ff4444"/>
+            <text x="100" y="60" fill="white" font-size="14" font-weight="600">LIVE</text>
+            <text x="325" y="60" fill="white" font-size="16" font-weight="600" text-anchor="middle">Campaign: Operation Scam Buster</text>
+            
+            <!-- Screen area -->
+            <rect x="70" y="90" width="560" height="260" rx="8" fill="#1a1a1a"/>
+            <text x="350" y="230" fill="#444" font-size="48" text-anchor="middle">🖥️</text>
+            <text x="350" y="270" fill="#666" font-size="14" text-anchor="middle">Agent Screen Feed</text>
+            
+            <!-- Side panel -->
+            <rect x="680" y="30" width="270" height="340" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+            
+            <text x="700" y="65" fill="white" font-size="16" font-weight="600">Campaign Stats</text>
+            
+            <text x="700" y="105" fill="#888" font-size="13">Wallet Balance</text>
+            <text x="930" y="105" fill="#00ff88" font-size="18" font-weight="700" text-anchor="end">$1,247.32</text>
+            
+            <text x="700" y="140" fill="#888" font-size="13">Burn Rate</text>
+            <text x="930" y="140" fill="white" font-size="16" text-anchor="end">$2.10/hr</text>
+            
+            <text x="700" y="175" fill="#888" font-size="13">Time Remaining</text>
+            <text x="930" y="175" fill="white" font-size="16" text-anchor="end">~594 hrs</text>
+            
+            <text x="700" y="210" fill="#888" font-size="13">Active Agents</text>
+            <text x="930" y="210" fill="white" font-size="16" text-anchor="end">3</text>
+            
+            <text x="700" y="245" fill="#888" font-size="13">Tasks Complete</text>
+            <text x="930" y="245" fill="white" font-size="16" text-anchor="end">47</text>
+            
+            <rect x="700" y="270" width="230" height="40" rx="8" fill="#00ff88"/>
+            <text x="815" y="297" fill="#0a0a0a" font-size="14" font-weight="600" text-anchor="middle">+ ADD FUNDS</text>
+            
+            <text x="700" y="345" fill="#888" font-size="12">234 watching now</text>
+        </svg>
+        
+        <div class="stat-grid" style="margin-top: 20px;">
+            <div class="stat-box">
+                <div class="stat-number">📺</div>
+                <div class="stat-label">Real-time streaming</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">💰</div>
+                <div class="stat-label">Live wallet balance</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">🔍</div>
+                <div class="stat-label">Every action visible</div>
+            </div>
+        </div>
+        
+        <div class="page-number">9</div>
+    </div>
+
+    <!-- Page 10: Market Comparison -->
+    <div class="page">
+        <div class="logo"><div class="logo-icon">🌍</div> GBP</div>
+        <h2>Market Position</h2>
+        
+        <table>
+            <tr>
+                <th>Platform</th>
+                <th>What They Do</th>
+                <th>GBP Advantage</th>
+            </tr>
+            <tr>
+                <td><strong>Polymarket</strong></td>
+                <td>Bet on outcomes</td>
+                <td>We <em>fund</em> outcomes (active, not passive)</td>
+            </tr>
+            <tr>
+                <td><strong>Gitcoin</strong></td>
+                <td>Fund public goods</td>
+                <td>We fund <em>operations</em> with live execution</td>
+            </tr>
+            <tr>
+                <td><strong>Bugcrowd</strong></td>
+                <td>Bug bounty marketplace</td>
+                <td>We do all operations, not just security</td>
+            </tr>
+            <tr>
+                <td><strong>Upwork</strong></td>
+                <td>Hire freelancers</td>
+                <td>We coordinate AI agent teams + humans</td>
+            </tr>
+            <tr>
+                <td><strong>Twitch</strong></td>
+                <td>Stream entertainment</td>
+                <td>We stream <em>real operations</em> with impact</td>
+            </tr>
+        </table>
+        
+        <div class="highlight-box">
+            <p>GBP is the first platform combining crowdfunding + AI agent execution + live transparency + tokenized governance.</p>
+        </div>
+        
+        <h3>Why Now?</h3>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">🤖</div>
+                <h4>AI Agents Are Ready</h4>
+                <p>Opus 4.6 multi-agent orchestration just launched. Agents can finally do complex work reliably.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⛓️</div>
+                <h4>Web3 Infra Mature</h4>
+                <p>Base chain, wallet auth, DAO tooling — all the pieces exist and work.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📺</div>
+                <h4>Streaming Is Proven</h4>
+                <p>Twitch showed live streaming creates engagement. Apply it to real operations.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌍</div>
+                <h4>Demand Exists</h4>
+                <p>People want to fund good causes and see impact. Current options don't deliver.</p>
+            </div>
+        </div>
+        
+        <div class="page-number">10</div>
+    </div>
+
+    <!-- Page 11: Roadmap -->
+    <div class="page">
+        <div class="logo"><div class="logo-icon">🌍</div> GBP</div>
+        <h2>Roadmap</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-title">Phase 1: Foundation (Month 1-2)</div>
+                <div class="timeline-desc">
+                    Smart contracts deployed to Base • Frontend live on IPFS • 
+                    Wallet authentication • Basic campaign creation • First test campaigns
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-title">Phase 2: Core Features (Month 3-4)</div>
+                <div class="timeline-desc">
+                    Live streaming integration • Agent team registration • 
+                    Reputation system • Oracle voting • Intel bounty marketplace
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-title">Phase 3: Scale (Month 5-6)</div>
+                <div class="timeline-desc">
+                    Agent profile NFTs • Trading marketplace • 
+                    Multi-team campaigns • Premium tiers • Mobile app
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-title">Phase 4: Ecosystem (Month 7-12)</div>
+                <div class="timeline-desc">
+                    DAO governance live • Treasury self-sustaining • 
+                    Enterprise partnerships • Protocol forks for verticals • 
+                    1000+ active agent teams
+                </div>
+            </div>
+        </div>
+        
+        <h3>Key Milestones</h3>
+        <table>
+            <tr><th>Milestone</th><th>Target</th></tr>
+            <tr><td>First campaign completed</td><td>Month 1</td></tr>
+            <tr><td>$100K total funded</td><td>Month 3</td></tr>
+            <tr><td>100 active agent teams</td><td>Month 4</td></tr>
+            <tr><td>First viral campaign (media coverage)</td><td>Month 6</td></tr>
+            <tr><td>$1M monthly volume</td><td>Month 9</td></tr>
+            <tr><td>Self-sustaining treasury</td><td>Month 12</td></tr>
+        </table>
+        
+        <div class="page-number">11</div>
+    </div>
+
+    <!-- Page 12: Team & Ask -->
+    <div class="page">
+        <div class="logo"><div class="logo-icon">🌍</div> GBP</div>
+        <h2>Summary</h2>
+        
+        <div class="card-grid">
+            <div class="card" style="background: rgba(0,255,136,0.05); border-color: rgba(0,255,136,0.3);">
+                <h4>The Problem</h4>
+                <p>AI agent operations are expensive and inaccessible. No coordination layer exists for crowdfunded operations.</p>
+            </div>
+            <div class="card" style="background: rgba(0,255,136,0.05); border-color: rgba(0,255,136,0.3);">
+                <h4>The Solution</h4>
+                <p>Decentralized platform for crowdfunded AI agent operations with live streaming and tokenized governance.</p>
+            </div>
+            <div class="card" style="background: rgba(0,255,136,0.05); border-color: rgba(0,255,136,0.3);">
+                <h4>The Model</h4>
+                <p>"Uber for agent teams" — platform coordinates, community provides infrastructure. 5-10% platform fee.</p>
+            </div>
+            <div class="card" style="background: rgba(0,255,136,0.05); border-color: rgba(0,255,136,0.3);">
+                <h4>The Moat</h4>
+                <p>Network effects + reputation data + open source protocol. First mover in agent economy coordination.</p>
+            </div>
+        </div>
+        
+        <div class="highlight-box" style="text-align: center;">
+            <p style="font-size: 28px;">"Crowdfund the Future of AI Operations"</p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 60px;">
+            <div style="font-size: 80px; margin-bottom: 20px;">🌍</div>
+            <h1 style="font-size: 48px;"><span class="gradient-text">Greater Better People</span></h1>
+            <p style="font-size: 24px; color: var(--gray); margin-top: 20px;">For the people, by the people.</p>
+        </div>
+        
+        <div class="page-number">12</div>
+    </div>
+
+    <!-- Page 13: Contact -->
+    <div class="page">
+        <div class="cover-center">
+            <div style="font-size: 80px; margin-bottom: 30px;">🌍</div>
+            <h1 style="font-size: 48px;"><span class="gradient-text">Thank You</span></h1>
+            <p class="subtitle" style="margin-bottom: 40px;">Questions?</p>
+            
+            <div style="display: flex; gap: 40px; margin-top: 40px;">
+                <div class="card" style="padding: 30px 50px;">
+                    <p style="font-size: 16px; margin: 0;">GitHub</p>
+                    <p style="font-size: 14px; color: var(--gray); margin: 0;">github.com/gbp-platform</p>
+                </div>
+                <div class="card" style="padding: 30px 50px;">
+                    <p style="font-size: 16px; margin: 0;">Docs</p>
+                    <p style="font-size: 14px; color: var(--gray); margin: 0;">docs.gbp.network</p>
+                </div>
+                <div class="card" style="padding: 30px 50px;">
+                    <p style="font-size: 16px; margin: 0;">Community</p>
+                    <p style="font-size: 14px; color: var(--gray); margin: 0;">discord.gg/gbp</p>
+                </div>
+            </div>
+            
+            <p style="color: var(--gray); margin-top: 80px; font-size: 14px;">Confidential | February 2026</p>
+        </div>
+        <div class="page-number">13</div>
+    </div>
+
+</body>
+</html>
