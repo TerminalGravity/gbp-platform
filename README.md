@@ -299,6 +299,77 @@ All active campaigns stream agent operations in real-time:
 | Intel Submissions | 100 | 1,000 | 10,000 |
 | Treasury Balance | $5K | $100K | $1M |
 
+---
+
+## ⚖️ Viability Assessment
+
+*Honest analysis of what works, what's hard, and what could kill this.*
+
+### 🟢 High Confidence (Will Work)
+
+| Phase | Why |
+|-------|-----|
+| **Phase 0-1: Contracts** | Standard ERC-20 + staking. Boilerplate exists. 2 weeks realistic. |
+| **Phase 2: Frontend** | Next.js + RainbowKit is well-documented. Standard Web3 stack. |
+| **Phase 3: Agent SDK** | OpenClaw already does this. It's an abstraction layer. |
+
+### 🟡 Medium Risk (Achievable but Hard)
+
+| Phase | Challenge | Mitigation |
+|-------|-----------|------------|
+| **Phase 4: Live Streaming** | WebRTC is complex. Screen capture + relay + viewer at scale is non-trivial. | Start with simple OBS → Twitch relay before custom infra. |
+| **Phase 6: Closed Beta** | First real campaign needs a compelling target + agent team that actually delivers. | Pick a "gimme" target (known scam with public evidence). |
+| **Phase 7: Launch** | 10K holders requires marketing spend + virality. | One viral campaign > paid ads. |
+
+### 🔴 High Risk (Make or Break)
+
+| Risk | Impact | Reality Check |
+|------|--------|---------------|
+| **Regulatory** | DAO + token + crowdfunding = SEC attention | Wyoming DAO LLC helps but doesn't guarantee immunity. Need real legal opinion ($10-50K). |
+| **Token Utility** | If campaigns don't deliver value, token dumps | First 3 campaigns must succeed publicly. |
+| **Agent Reliability** | AI agents are good but not autonomous-mission-ready | Need human-in-the-loop for v1. Full autonomy is v2+. |
+| **Market Timing** | Crypto sentiment matters for adoption | Monitor market conditions at launch. |
+
+### ⏱️ Realistic Timeline
+
+| Roadmap Target | Realistic Estimate |
+|----------------|-------------------|
+| Phase 1-4 | 14-18 weeks (1.5x buffer) |
+| Closed Beta | Month 4-5 |
+| Public Launch | Month 6-8 |
+| $1M funded | Month 12+ (needs viral moment) |
+
+### ✅ What Makes This Viable
+
+1. **Unique positioning** — No one else is doing "crowdfunded AI agent ops with live streaming"
+2. **Existing infra** — OpenClaw, agent teams, compute already operational
+3. **Low MVP cost** — No hardware, no employees, just code + API costs
+4. **High meme potential** — "Watch AI agents hunt scammers" is inherently viral
+
+### ❌ What Could Kill It
+
+1. **No viral first campaign** — Without a "wow" moment, traction dies
+2. **Legal letter** — One cease & desist from SEC or target could freeze everything
+3. **Agent failure on stream** — Public embarrassment kills credibility
+4. **Token launch flop** — If liquidity is thin, whales dump immediately
+
+### 🎯 Critical Success Factors
+
+| Factor | Requirement |
+|--------|-------------|
+| **Legal** | Opinion letter before token launch — non-negotiable |
+| **First Campaign** | Must be guaranteed win — pick easy target with public evidence |
+| **Streaming** | Use existing infra (Twitch/YouTube) before custom WebRTC |
+| **Autonomy** | Start with human-assisted agents, not full autonomy |
+| **Capital** | Budget $20-50K for marketing + liquidity at launch |
+
+### 📊 Overall Viability: 65%
+
+The tech is the easy part. The hard parts are:
+- Getting the first 1,000 believers
+- Not getting sued  
+- First campaign delivering visible, shareable results
+
 ## 🔗 Links
 
 - Docs: Coming soon
