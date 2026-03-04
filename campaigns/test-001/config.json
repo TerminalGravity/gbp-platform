@@ -1,0 +1,20 @@
+{
+  "id": "test-001",
+  "title": "Pipeline Test Campaign",
+  "objective": "Search for 'GBP Platform' on Google and take a screenshot of the results.",
+  "status": "complete",
+  "funding": {
+    "goal": 1000,
+    "current": 1000,
+    "spent": 50
+  },
+  "execution": {
+    "started_at": "2026-02-18T08:48:58Z",
+    "completed_at": "2026-02-18T08:48:58Z",
+    "agent_host": "ugc-factory-01"
+  },
+  "result": {
+    "success": true,
+    "artifacts": ["screenshot.png"]
+  }
+}
